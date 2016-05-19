@@ -8,10 +8,10 @@ namespace IzzyDeal.Models
 {
     public class IzzyDealDbContext : DbContext
     {
-        // public IzzyDealContext()
-        // {
-        //     Database.EnsureCreated();
-        // }
+        public IzzyDealDbContext()
+        {
+            Database.EnsureCreated();
+        }
         
         public DbSet<Deal> Deals { get; set; }
         public DbSet<Store> Stores { get; set; }
