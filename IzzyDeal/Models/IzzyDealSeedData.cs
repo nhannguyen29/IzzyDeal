@@ -16,8 +16,17 @@ namespace IzzyDeal.Models
         {
             if (!_context.Deals.Any())
             {
-                
-                var testDeal = new Deal() 
+                var seedStore = new Store()
+                {
+                    StoreName = "test"
+                };
+
+                var seedCategory = new Category()
+                {
+                    CategoryName = "test"
+                };
+
+                var seedDeal = new Deal() 
                 {
                     StoreId = 1,
                     DealDescription = "Test",
@@ -29,8 +38,9 @@ namespace IzzyDeal.Models
                     ExternalURL = "Test",
                     PriorityNum = 1
                 };
-                
-                _context.Deals.Add(testDeal);
+                _context.Stores.Add(seedStore);
+                _context.Categories.Add(seedCategory);
+                _context.Deals.Add(seedDeal);
                 
                 _context.SaveChanges();
             }
