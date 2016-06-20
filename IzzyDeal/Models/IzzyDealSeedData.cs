@@ -30,12 +30,12 @@ namespace IzzyDeal.Models
                 {
                     StoreId = 1,
                     DealDescription = "Test",
-                    PosterURL = "Test",
+                    PosterUrl = "Test",
                     StartTime = DateTime.UtcNow,
                     EndTime = DateTime.UtcNow,
                     ViewNum = 0,
                     CategoryId = 1,
-                    ExternalURL = "Test",
+                    ExternalUrl = "Test",
                     PriorityNum = 1
                 };
                 _context.Stores.Add(seedStore);
@@ -43,6 +43,7 @@ namespace IzzyDeal.Models
                 _context.Deals.Add(seedDeal);
                 
                 _context.SaveChanges();
+                
             }
         } 
     }
